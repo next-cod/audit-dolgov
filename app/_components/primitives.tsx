@@ -2,9 +2,10 @@
 import * as React from "react";
 
 export function ArrowBullet() {
+  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   return (
     <span className="arrow-bullet" aria-hidden>
-      <img src="../arow.svg" alt="" />
+      <img src={`${base}/arow.svg`} alt="" />
     </span>
   );
 }
