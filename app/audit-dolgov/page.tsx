@@ -239,7 +239,7 @@ export default function AuditDolgovPage() {
             <h2>Идите сверху вниз. Сайт сам сохраняет ответы.</h2>
           </div>
           <p>
-            Заполните карточку по каждому долгу — чем честнее, тем лучше. Сайт
+            Заполните карточку по каждому долгу - чем честнее, тем лучше. Сайт
             автоматически определит, каким долгам уделить внимание в первую очередь.
           </p>
           <a href="#p2" className="guide-button sans">
@@ -247,7 +247,7 @@ export default function AuditDolgovPage() {
           </a>
         </div>
 
-        {/* PAGE 2 — Карта долгов */}
+        {/* PAGE 2 - Карта долгов */}
         <section id="p2" className="section">
           <div>
             <h2 className="h1">Карта ваших долгов</h2>
@@ -267,7 +267,7 @@ export default function AuditDolgovPage() {
               <div className="debt-summary-label">Общая сумма</div>
               <div className="debt-summary-value">
                 {Object.keys(debtTotals).length === 0
-                  ? "—"
+                  ? "-"
                   : Object.entries(debtTotals)
                       .map(([cur, sum]) => `${sum.toLocaleString("ru-RU", { maximumFractionDigits: 2 })} ${cur}`)
                       .join(" · ")}
@@ -307,7 +307,7 @@ export default function AuditDolgovPage() {
           <PageFooter index={1} total={TOTAL} />
         </section>
 
-        {/* PAGE 3 — Как я думаю о долгах */}
+        {/* PAGE 3 - Как я думаю о долгах */}
         <section id="p3" className="section">
           <div>
             <h2 className="h1">Как я думаю о своих долгах</h2>
@@ -340,7 +340,7 @@ export default function AuditDolgovPage() {
           <PageFooter index={2} total={TOTAL} />
         </section>
 
-        {/* PAGE 4 — Маленькие шаги */}
+        {/* PAGE 4 - Маленькие шаги */}
         <section id="p4" className="section">
           <div>
             <h2 className="h1">Маленькие шаги</h2>
@@ -385,7 +385,7 @@ export default function AuditDolgovPage() {
           <PageFooter index={3} total={TOTAL} />
         </section>
 
-        {/* PAGE 5 — Как изменилось состояние */}
+        {/* PAGE 5 - Как изменилось состояние */}
         <section id="p5" className="section">
           <div>
             <h2 className="h1">Как изменилось моё состояние</h2>
@@ -397,8 +397,8 @@ export default function AuditDolgovPage() {
               <AnxietyScale
                 value={state.anxietyBefore}
                 onChange={(v) => update("anxietyBefore", v)}
-                leftLabel="1 — спокойно"
-                rightLabel="10 — паника"
+                leftLabel="1 - спокойно"
+                rightLabel="10 - паника"
               />
             </div>
             <div className="state-scale-block">
@@ -406,8 +406,8 @@ export default function AuditDolgovPage() {
               <AnxietyScale
                 value={state.anxietyAfter}
                 onChange={(v) => update("anxietyAfter", v)}
-                leftLabel="1 — контроль"
-                rightLabel="10 — тревога"
+                leftLabel="1 - контроль"
+                rightLabel="10 - тревога"
               />
             </div>
           </div>
@@ -452,7 +452,7 @@ export default function AuditDolgovPage() {
             <div className="flex items-start gap-3">
               <ArrowBullet />
               <div>
-                Этот чек-лист — один из инструментов работы с долгами и денежным мышлением.
+                Этот чек-лист - один из инструментов работы с долгами и денежным мышлением.
                 Чтобы глубже разобраться в своих жизненных сценариях и способах реагирования,
                 читайте книгу Натальи Батаевой «На Личность идёт НаЛичность» или проходите
                 онлайн-курс.
@@ -743,7 +743,7 @@ function DebtCardComponent({
         {/* Pressure scales */}
         <div style={{ marginBottom: "6px" }}>
           <span style={{ fontSize: "14px", fontWeight: 600, color: "var(--c-muted)", textTransform: "uppercase", letterSpacing: "0.05em" }}>
-            Насколько давит? (1 — легко, 10 — критично)
+            Насколько давит? (1 - легко, 10 - критично)
           </span>
         </div>
 
@@ -785,7 +785,6 @@ function DebtCardComponent({
           data-active={debt.ignoring}
           onClick={() => onChange({ ignoring: !debt.ignoring })}
         >
-          <span style={{ fontSize: "18px" }}>👁</span>
           <span>Отметить: стараюсь не замечать этот долг</span>
         </button>
       </div>
@@ -892,7 +891,7 @@ function AnxietyScale({
 
   function feedbackText(v: number | null) {
     if (!v) return { title: "Выберите число", text: "Оцените уровень тревоги от 1 до 10." };
-    if (v <= 3) return { title: "Низкая тревога", text: "Вы в относительно спокойном состоянии — есть ресурс для анализа." };
+    if (v <= 3) return { title: "Низкая тревога", text: "Вы в относительно спокойном состоянии - есть ресурс для анализа." };
     if (v <= 6) return { title: "Средняя тревога", text: "Тревога есть, но вы способны наблюдать и делать шаги." };
     if (v <= 8) return { title: "Высокая тревога", text: "Долги сильно давят. Важно начать с одного маленького шага." };
     return { title: "Очень высокая тревога", text: "Тяжело. Начните с дыхания и одного самого простого действия." };

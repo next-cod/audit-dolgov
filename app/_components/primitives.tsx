@@ -291,7 +291,7 @@ function moodText(value: number | null, mode: "before" | "after") {
   if (!value) {
     return {
       title: "Выберите число",
-      text: "1 — сильная паника, 10 — спокойствие и опора.",
+      text: "1 - сильная паника, 10 - спокойствие и опора.",
     };
   }
   if (value <= 2) {
@@ -368,8 +368,8 @@ export function MoodScale({
         })}
       </div>
       <div className="mood-scale-labels sans">
-        <span>1 — паника</span>
-        <span>10 — спокойно</span>
+        <span>1 - паника</span>
+        <span>10 - спокойно</span>
       </div>
       <div className="mood-feedback">
         <strong>{feedback.title}</strong>
