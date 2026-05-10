@@ -447,7 +447,7 @@ export default function AuditDolgovPage() {
 
           <div
             className="quote-card mt-10"
-            style={{ borderColor: "var(--c-gold)", background: "#fff" }}
+            style={{ background: "var(--c-purple-soft)" }}
           >
             <div className="flex items-start gap-3">
               <ArrowBullet />
