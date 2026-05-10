@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useMemo, useState } from "react";
 import {
   ArrowBullet,
@@ -553,7 +552,7 @@ function CoverPage() {
       }}
     >
       <div className="mb-7" style={{ display: "flex", justifyContent: "center" }}>
-        <Image src="/logo-nalich.png" alt="НаЛичность" height={115} width={200} style={{ height: "115px", width: "auto" }} priority />
+        <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo-nalich.png`} alt="НаЛичность" style={{ height: "115px", width: "auto" }} />
       </div>
       <div style={{ marginBottom: "20px", marginTop: "36px" }}>
         <span className="pill-gold" style={{ fontSize: "20px", padding: "10px 32px" }}>
