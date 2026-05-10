@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Static export copied locally for preview only
+/_next/
+/404/
+/404.html
+/index.html
+/index.txt
+/audit-dolgov/
+/spokojstvie/
+/fonts/
+/arow.svg
+/logo-nalich.png
+/hero-bg.png
+/.nojekyll
+
+# Misc
+.DS_Store
+*.pem
+.env*
+!.env.example
+
+# Debug
+npm-debug.log*
+.codex-*.log
+
+# Vercel
+.vercel
