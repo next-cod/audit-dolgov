@@ -552,7 +552,7 @@ function CoverPage() {
       }}
     >
       <div className="mb-7" style={{ display: "flex", justifyContent: "center" }}>
-        <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo-nalich.png`} alt="НаЛичность" style={{ height: "115px", width: "auto" }} />
+        <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo-nalich.png`} alt="НаЛичность" className="cover-logo" />
       </div>
       <div style={{ marginBottom: "20px", marginTop: "36px" }}>
         <span className="pill-gold" style={{ fontSize: "20px", padding: "10px 32px" }}>

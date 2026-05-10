@@ -1558,6 +1558,11 @@
   }
 }
 
+.cover-logo {
+  height: 115px;
+  width: auto;
+}
+
 @media (max-width: 720px) {
   .checklist-root {
     overflow-x: hidden;
@@ -1663,6 +1668,11 @@
   .checklist-root .cover-page {
     padding: 34px 16px 38px !important;
     max-width: 100%;
+  }
+
+  .cover-logo {
+    height: 75px !important;
+    width: auto !important;
   }
 
   .checklist-root .cover-page h1 {
