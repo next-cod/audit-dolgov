@@ -1563,6 +1563,19 @@
   width: auto;
 }
 
+/* ── Responsive 2-column grid (tracker, week cards, day cards) ── */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.grid-2col-small {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
 @media (max-width: 720px) {
   .checklist-root {
     overflow-x: hidden;
@@ -2250,5 +2263,10 @@
   .checklist-root .level-option-text {
     font-size: 19px;
     line-height: 1.45;
+  }
+
+  .grid-2col,
+  .grid-2col-small {
+    grid-template-columns: 1fr !important;
   }
 }
