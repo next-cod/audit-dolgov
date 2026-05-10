@@ -527,7 +527,7 @@
     padding: 5px 14px;
   }
 
-  /* таблица долгов — горизонтальный скролл */
+  /* таблица долгов - горизонтальный скролл */
   .checklist-root .table-purple {
     table-layout: auto;
     min-width: 480px;
